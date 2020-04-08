@@ -115,6 +115,21 @@
 	  <script src="JS- connected to every page/jquery-3.4.1.slim.min.js"></script>
     <script src="JS- connected to every page/bootstrap.bundle.min.js"></script>
 	  <script src="Menu page/JS/menu.js"></script>
+	  <script>// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();</script>
   </body>
 	
 </html>
